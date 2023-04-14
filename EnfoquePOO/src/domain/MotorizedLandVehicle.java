@@ -31,7 +31,6 @@ public class MotorizedLandVehicle extends Vehicle{
 
     @Override
     public float calculateFinalPrice(float commercialValue) {
-        
         return 0;
     }
 
