@@ -23,7 +23,7 @@ public class AerialVehicle extends Vehicle{
     }
 
     @Override
-    public float calculateFinalPrice(float commercialValue) {
+    public double calculateFinalPrice() {
         return 0;
     }
 

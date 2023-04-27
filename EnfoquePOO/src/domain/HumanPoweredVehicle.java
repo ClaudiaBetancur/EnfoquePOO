@@ -1,36 +1,23 @@
 package domain;
 
 public class HumanPoweredVehicle extends Vehicle{
-    private boolean environmentalSubsidy;
+    private static final double environmentalSubsidy = 0.25;
 
 
     public HumanPoweredVehicle(String brand, String model, String reference, int commercialValue,
-                               boolean environmentalSubsidy) {
+                               double environmentalSubsidy) {
         super(brand, model, reference, commercialValue);
-        this.environmentalSubsidy = environmentalSubsidy;
     }
 
-    public boolean isEnvironmentalSubsidy() {
-        return environmentalSubsidy;
-    }
-
-    public void setEnvironmentalSubsidy(boolean environmentalSubsidy) {
-        this.environmentalSubsidy = environmentalSubsidy;
-    }
 
     @Override
     public String toString() {
-        return "HumanPoweredVehicle{" +
-                "environmentalSubsidy=" + environmentalSubsidy +
-                '}';
+        return "HumanPoweredVehicle{}" + super.toString();
     }
 
     @Override
-    public float calculateFinalPrice(float commercialValue) {
-        final float DISCOUNT = (commercialValue * 25)/ 100;
-        float result = commercialValue - DISCOUNT;
-
-        return result;
+    public double calculateFinalPrice() {
+        return (commercialValue - environmentalSubsidy);
     }
 
 

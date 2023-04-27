@@ -31,6 +31,6 @@ public abstract class Vehicle {
 
     //public abstract void calculateFinalPrice();
 
-    public abstract float calculateFinalPrice(float commercialValue);
+    public abstract double calculateFinalPrice();
 
 }
